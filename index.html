@@ -49,14 +49,16 @@
     .toc a:hover{color:var(--fg)}
     .kicker{letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800;font-size:.85rem}
     .foot{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);color:var(--muted);font-size:.95rem}
+    .cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:22px 0}
     .btn{appearance:none;border:1px solid var(--border);background:var(--card);color:var(--fg);padding:10px 14px;border-radius:12px;font-weight:700;text-decoration:none;cursor:pointer}
     .btn:hover{border-color:var(--accent)}
     .pill{border:1px solid var(--border);padding:2px 10px;border-radius:999px;font-size:.85rem;color:var(--muted)}
     .numbered li{margin:8px 0}
     code{background:var(--card);border:1px solid var(--border);padding:.15em .35em;border-radius:6px;color:var(--code)}
+    .share{display:flex;gap:8px;flex-wrap:wrap}
     .top-link{position:fixed;right:16px;bottom:16px}
     @page{margin:18mm}
-    @media print{header,.top-link{display:none}}
+    @media print{header,.cta,.share,.top-link{display:none}}
   </style>
   <script type="application/ld+json">
   {
@@ -88,7 +90,10 @@
     <section>
       <h1>Il Manifesto della Repubblica dei Dipartimenti</h1>
       <p class="lead">Verso una Repubblica senza partiti: competenza, trasparenza, responsabilità. Tutto misurabile. Tutto verificabile.</p>
-      <span class="pill">Versione 1.0</span>
+      <div class="cta">
+        <a class="btn" href="#firma" onclick="document.getElementById('firma').scrollIntoView({behavior:'smooth'});return false;">Sostieni il Manifesto</a>
+        <span class="pill">Versione 1.0</span>
+      </div>
       <div class="toc" aria-label="Indice rapido">
         <a href="#premessa">Premessa</a>
         <a href="#principi">Principi</a>
@@ -112,7 +117,54 @@
     <section id="principi">
       <h2>I nostri principi</h2>
       <div class="grid grid-2">
-        <!-- principi cards come sopra -->
+        <div class="card">
+          <h3>1. La competenza sopra l’appartenenza</h3>
+          <p>Ogni Direttore guida un Dipartimento per ciò che sa fare, non per chi rappresenta. La selezione dei candidati avviene sulla base di esperienze, risultati e trasparenza personale.</p>
+        </div>
+        <div class="card">
+          <h3>2. La trasparenza come regola</h3>
+          <p>Ogni decisione, spesa e azione è tracciata pubblicamente. Tutto il lavoro dei Dipartimenti è visibile online, aggiornato quotidianamente e verificabile da ogni cittadino.</p>
+        </div>
+        <div class="card">
+          <h3>3. Il voto come responsabilità</h3>
+          <p>Il diritto di voto è un dovere consapevole: ogni cittadino deve possedere un <em>Patentino Civico</em>, ottenuto studiando la struttura della Repubblica e superando un esame, da rinnovare ogni 5 anni.</p>
+        </div>
+        <div class="card">
+          <h3>4. La campagna come contenuto</h3>
+          <p>Niente video, comizi o eventi pubblici. Ogni campagna si svolge su un portale statale: solo testo, solo piani, solo idee. Le domande più votate dai cittadini sono obbligatorie per tutti i candidati.</p>
+        </div>
+        <div class="card">
+          <h3>5. Il governo come team</h3>
+          <p>Ogni Direttore lavora come un produttore agile: obiettivi trimestrali, cerimonie di revisione, iterazione continua. Il governo è una rete coordinata di dipartimenti autonomi.</p>
+        </div>
+        <div class="card">
+          <h3>6. Il popolo come revisore</h3>
+          <p>Ogni trimestre, i cittadini possono proporre mini‑referendum online per decisioni importanti o per la rimozione anticipata di un Direttore.</p>
+        </div>
+        <div class="card">
+          <h3>7. Il tempo come misura</h3>
+          <p>Mandati di 4 anni con revisione pubblica annuale condotta dalla Presidenza Centrale e visibile ai cittadini.</p>
+        </div>
+        <div class="card">
+          <h3>8. Il denaro come strumento</h3>
+          <p>Budget definito per Dipartimento. Ogni sforamento richiede giustificazione, approvazione della Presidenza Centrale e voto pubblico.</p>
+        </div>
+        <div class="card">
+          <h3>9. Lo stipendio come responsabilità</h3>
+          <p>Stipendi alti, nessun rimborso o privilegio. Uno stipendio d’élite in cambio di un servizio d’élite.</p>
+        </div>
+        <div class="card">
+          <h3>10. La Presidenza Centrale come equilibrio</h3>
+          <p>Coordina e verifica. Pubblica report annuali e approva spese straordinarie. Non comanda: garantisce correttezza e bilanciamento.</p>
+        </div>
+        <div class="card">
+          <h3>11. Il controllo come sistema</h3>
+          <p>Un Dipartimento di Revisione vigila su tutti gli altri: sprechi, abusi e inefficienze. Indipendente, risponde ai cittadini.</p>
+        </div>
+        <div class="card">
+          <h3>12. Un organismo vivo</h3>
+          <p>Il governo come software sociale: documenta gli errori, misura i progressi, aggiorna continuamente i processi.</p>
+        </div>
       </div>
     </section>
 
@@ -121,19 +173,107 @@
       <p>La Repubblica è composta da <strong>Dipartimenti</strong>, ciascuno responsabile di un’area essenziale (Salute, Istruzione, Interno, Difesa, Agricoltura, Energia, ecc.). Ogni Dipartimento è autonomo nelle scelte operative, ma vincolato alla trasparenza e ai risultati.</p>
     </section>
 
+    <section id="elezioni">
+      <h3>Elezioni e campagne</h3>
+      <ul class="numbered">
+        <li>Ogni 4 anni i cittadini eleggono i <strong>Direttori dei Dipartimenti</strong>.</li>
+        <li>Tutto avviene su un <strong>portale statale</strong>:
+          <ul>
+            <li>presentazione dei candidati e dei loro piani;</li>
+            <li>raccolta e votazione delle domande dei cittadini;</li>
+            <li>risposte pubbliche e confronto tecnico;</li>
+            <li>votazione finale certificata.</li>
+          </ul>
+        </li>
+        <li>Violazioni (pubblicità esterna, video, eventi o sponsorizzazioni) → <strong>squalifica automatica</strong>.</li>
+      </ul>
+    </section>
+
+    <section id="revisione">
+      <h3>Revisione e accountability</h3>
+      <p>Ogni Direttore riceve un <strong>Annual Review</strong> condotto dalla Presidenza Centrale. Il risultato (efficacia, trasparenza, spesa, impatto) viene pubblicato online. I cittadini possono leggere, discutere e commentare le valutazioni.</p>
+      <p>I cittadini possono avviare <strong>referendum trimestrali</strong> per rimozione o riconferma dei Direttori, in base alle prestazioni.</p>
+    </section>
+
+    <section id="budget">
+      <h3>Budget e gestione</h3>
+      <ol>
+        <li>Ogni Dipartimento dispone di un <strong>budget operativo</strong> per manovre e stipendi; tutte le spese sono pubbliche in tempo reale.</li>
+        <li>Per superare il budget, il Direttore deve:
+          <ol>
+            <li>presentare una motivazione dettagliata;</li>
+            <li>ottenere l’approvazione della Presidenza Centrale;</li>
+            <li>sottoporre la decisione a <strong>voto pubblico</strong>.</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <section id="lavoro">
+      <h3>Lavoro e metodo</h3>
+      <p>I Direttori adottano un approccio <strong>agile e iterativo</strong>: obiettivi chiari, metriche di outcome, <strong>report giornalieri</strong> pubblici sul portale statale. Ogni cittadino può seguire l’avanzamento, proporre correzioni e visualizzare i dati di performance in tempo reale.</p>
+    </section>
+
+    <section id="partecipazione">
+      <h3>Partecipazione dei cittadini</h3>
+      <ul>
+        <li>Proporre domande e osservazioni;</li>
+        <li>Partecipare a consultazioni trimestrali;</li>
+        <li>Suggerire iniziative legislative;</li>
+        <li>Votare sulla fiducia dei Direttori;</li>
+        <li>Monitorare l’uso delle risorse pubbliche.</li>
+      </ul>
+    </section>
+
+    <section id="patentino">
+      <h2>Il Patentino Civico</h2>
+      <p>Il <em>Patentino Civico</em> è la chiave per partecipare alla Repubblica dei Dipartimenti. Si ottiene completando un corso digitale gratuito che illustra funzionamento del sistema, diritti e doveri del cittadino, e il principio della trasparenza. Un breve esame finale garantisce che chi vota comprenda ciò che sceglie. Rinnovo ogni <strong>5 anni</strong>.</p>
+    </section>
+
     <section id="conclusione">
       <h2>Conclusione</h2>
       <p>La Repubblica dei Dipartimenti non è un sogno utopico, ma un progetto concreto di responsabilità collettiva. È una chiamata a costruire un futuro dove la competenza vale più della propaganda, dove la verità è tracciabile, e il potere è temporaneo ma la fiducia è duratura.</p>
       <p>Un sistema progettato non per comandare, ma per servire. Un governo pensato come software: aggiornabile, trasparente, condiviso.</p>
     </section>
 
-    <p class="foot">© <span id="year"></span> Repubblica dei Dipartimenti.</p>
+    <section id="firma" class="card">
+      <h2>Aderisci e condividi</h2>
+      <p>Se condividi i principi del Manifesto, sostienilo pubblicamente. Puoi:</p>
+      <ul>
+        <li>Condividere il link al Manifesto sui tuoi canali;</li>
+        <li>Inserire il badge “Sostengo la Repubblica dei Dipartimenti” sul tuo sito;</li>
+        <li>Iscriverti alla newsletter per ricevere aggiornamenti sul progetto.</li>
+      </ul>
+      <div class="share">
+        <button class="btn" id="copyLink">Copia link</button>
+        <button class="btn" id="shareWeb">Condividi…</button>
+      </div>
+    </section>
+
+    <p class="foot">© <span id="year"></span> Repubblica dei Dipartimenti — Testo rilasciato con licenza <a href="#" rel="license noopener">CC BY‑SA 4.0</a>.</p>
   </main>
 
   <a class="btn top-link" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Torna su">↑</a>
 
   <script>
+    // anno footer
     document.getElementById('year').textContent = new Date().getFullYear();
+    // share/copia
+    const copy = document.getElementById('copyLink');
+    const share = document.getElementById('shareWeb');
+    if(copy){
+      copy.addEventListener('click', async () => {
+        try{ await navigator.clipboard.writeText(location.href); copy.textContent = 'Link copiato!'; }
+        catch{ copy.textContent = 'Impossibile copiare'; }
+        setTimeout(()=> copy.textContent = 'Copia link', 2000);
+      });
+    }
+    if(share && navigator.share){
+      share.addEventListener('click', async () => {
+        try{ await navigator.share({title: document.title, text: 'Leggi e condividi il Manifesto della Repubblica dei Dipartimenti', url: location.href}); }
+        catch{}
+      });
+    } else if(share){ share.disabled = true; share.title = 'Condivisione non supportata su questo dispositivo'; }
   </script>
 </body>
 </html>
